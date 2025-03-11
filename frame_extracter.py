@@ -36,8 +36,6 @@ class FrameExtracter:
         :param timestamp: Time position in HH:MM:SS or seconds format
         """
         frame_file_path = os.path.join(self.output_folder_path, f'frame_{seconds_to_hms(timestamp)}_{get_random_str(5)}.png')
-        print(timestamp)
-
         try:
             (
                 ffmpeg.input(self.video_file_path, ss=timestamp)  # Seek to the timestamp
@@ -55,5 +53,4 @@ class FrameExtracter:
         n_intervals = int(video_duration / interval_seconds)
 
         for i in range(n_intervals):
-            self.extract_frame(timestamp=i * interval_seconds)
             self.extract_frame(timestamp=i * interval_seconds)

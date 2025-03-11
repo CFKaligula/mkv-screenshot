@@ -12,3 +12,4 @@ wheels/
 ffmpeg.exe
 ffprobe.exe
 *.png
+.env
