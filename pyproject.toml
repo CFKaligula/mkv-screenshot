@@ -1,0 +1,13 @@
+[project]
+name = "mkv-screenshot"
+version = "0.1.0"
+description = "Wrapper for ffmpeg to easily extract frames from a video file."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ffmpeg-python>=0.2.0",
+    "fire>=0.7.0",
+]
+
+[tool.mypy]
+ignore_missing_imports = true
