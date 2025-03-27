@@ -2,7 +2,7 @@
 
 import dotenv
 
-from frame_extracter import FrameExtracter
+from ci import CommandInterface
 
 if __name__ == '__main__':
     # video_file_path = r''
@@ -14,5 +14,4 @@ if __name__ == '__main__':
     output_folder_path = os.environ['output']
 
     interval_seconds = 10
-    frame_extractor = FrameExtracter(video_file_path, output_folder_path)
-    frame_extractor.extract_at_interval(interval_seconds)
+    frame_extractor = CommandInterface().interval_folder(interval_seconds, video_file_path, output_folder_path)
